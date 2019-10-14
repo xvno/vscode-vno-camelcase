@@ -2,7 +2,7 @@
 	"name": "vno-camelcase",
 	"displayName": "vno-camelcase",
 	"description": "Change selected text to camel-cased.",
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"engines": {
 		"vscode": "^1.36.0"
 	},
@@ -34,5 +34,9 @@
 		"mocha": "^6.1.4",
 		"typescript": "^3.3.1",
 		"vscode-test": "^1.2.0"
+	},
+	"publisher": "xvno",
+	"repository": {
+		"xvno": "https://github.com/xvno/vscode-vno-camelcase.git"
 	}
 }

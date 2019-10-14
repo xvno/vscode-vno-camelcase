@@ -1,65 +1,51 @@
-# vno-camelcase README
+# vno-camelcase
 
-This is the README for your extension "vno-camelcase". After writing up a brief description, we recommend including the following sections.
+A VSCode extension which turns selected texts into their camel-cased form.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+1. Supports for
+    - single line selection
+    - multiple lines selections
+2. Supports word connector "-" & "_" and the arbitory composition of them, e.g. "-\_\_ ,  \_-\_ ,  -\_- , --- , \_\_\_"
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+No~
 
 ## Extension Settings
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+Configure any short cut as you like:
 
 For example:
 
-This extension contributes the following settings:
+```json
+// keybindings.json
 
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
+  [
+    ...,
+    {
+        "key": "cmd+h cmd+c",
+        "command": "extension.ccase"
+    }
+  ]
+```
 
 ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+No till now.
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
-
 ### 1.0.0
 
-Initial release of ...
+Support:
 
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+1. single-line & multi-line selections
+2. word connectors can be '-, \_' and their arbitory compositions
 
 -----------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+PRs are welcome!
+[github](https://github.com/xvno/vscode-vno-camelcase.git)
 
 **Enjoy!**
