@@ -21,7 +21,7 @@ function activate(context) {
 		// The code you place here will be executed every time your command is executed
 		// Display a message box to the user
 
-		const text = editor.document.getText(editor.selection);
+		let text = editor.document.getText(editor.selection);
 		// editor.replace(editor.selection, camelCase(text));
 		if(!(text && text.length > 0)) {
 			vscode.window.showInformationMessage('Error selection!');
@@ -35,7 +35,8 @@ function activate(context) {
 	context.subscriptions.push(disposable);
 }
 function camelCase (sel) {
-	return sel.replace(/([-_](\w))/g, (all, first, second) => {
+	let text = sel.trim();
+	return text.replace(/([-_]+(\w))/g, (all, first, second) => {
 		return second.toUpperCase();
 	})
 }
