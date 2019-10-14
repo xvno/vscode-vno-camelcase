@@ -8,20 +8,25 @@ function activate(context) {
   let disposable = vscode.commands.registerCommand(
     'extension.ccase',
     function() {
-      camelCaseSelected();
+      editor.selections.forEach(function(selection, idx) {
+        setTimeout(() => {
+          camelCaseSelected(selection);
+        }, 5*idx);
+      });
     }
   );
-
   context.subscriptions.push(disposable);
 }
 
 function deactivate() {}
 
-function camelCaseSelected() {
-  let selected = editor.document.getText(editor.selection).trim();
+function camelCaseSelected(selection) {
+  let selected = editor.document.getText(selection).trim();
+
   if (checkText(selected, vscode.window.showInformationMessage)) {
     editor.edit(editBuilder => {
-      editBuilder.replace(editor.selection, camelCaseText(selected));
+      console.log('editing: ' + selected + ' ' + selection);
+      editBuilder.replace(selection, camelCaseText(selected));
     });
   }
 }
