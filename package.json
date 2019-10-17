@@ -2,7 +2,7 @@
 	"name": "vno-camelcase",
 	"displayName": "vno-camelcase",
 	"description": "Change selected text to camel-cased.",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"engines": {
 		"vscode": "^1.36.0"
 	},
@@ -17,7 +17,11 @@
 		"commands": [
 			{
 				"command": "extension.ccase",
-				"title": "Camel Case"
+				"title": "Camel Case: camelCase"
+			},
+			{
+				"command": "extension.scase",
+				"title": "Snake Case: snakeCase"
 			}
 		]
 	},

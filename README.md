@@ -1,6 +1,6 @@
 # vno-camelcase
 
-A VSCode extension which turns selected texts into their camel-cased form.
+A VSCode extension which turns selected texts into their camelCased and snake_cased form.
 
 ## Features
 
@@ -11,7 +11,7 @@ A VSCode extension which turns selected texts into their camel-cased form.
 
 ## Requirements
 
-No~
+- vscode: ^1.36.0
 
 ## Extension Settings
 
@@ -27,6 +27,10 @@ For example:
     {
         "key": "cmd+h cmd+c",
         "command": "extension.ccase"
+    },
+    {
+        "key": "cmd+h cmd+s",
+        "command": "extension.scase"
     }
   ]
 ```
@@ -37,12 +41,19 @@ No till now.
 
 ## Release Notes
 
+### 1.1.0
+
+Support:
+
+1. transform text into snake_cased
+
 ### 1.0.0
 
 Support:
 
-1. single-line & multi-line selections
-2. word connectors can be '-, \_' and their arbitory compositions
+1. transform text into camelCased
+2. single-line & multi-line selections
+3. word connectors can be '-, \_' and their arbitory compositions
 
 -----------------------------------------------------------------------------------------------------------
 PRs are welcome!
