@@ -37,7 +37,7 @@ For example:
 
 ## Known Issues
 
-No till now.
+None till now.
 
 ## Release Notes
 
